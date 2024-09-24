@@ -58,3 +58,9 @@
     height: 100vh; /* Full viewport height */
     display: block; /* Optional: remove any extra space around the SVG */
   }
+
+  body {
+    display: flex;
+  justify-content: center; 
+  align-items: center;
+  }
