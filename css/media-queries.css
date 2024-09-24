@@ -57,3 +57,9 @@
 body {
   background-color: blue;
 }
+
+.text {
+  color: rgb(213, 122, 225);
+  text-align: center;
+  text-shadow: rgb(97, 126, 3) 1px 0 10px;
+}
