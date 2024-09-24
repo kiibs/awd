@@ -53,3 +53,8 @@
     }
   }
 
+  svg {
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: block; /* Optional: remove any extra space around the SVG */
+  }
