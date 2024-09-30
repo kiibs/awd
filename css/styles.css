@@ -1,0 +1,63 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container for the grid layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Left Sidebar (1 part), Main (2 parts), Right Sidebar (1 part) */
+    grid-template-rows: auto 1fr; /* Header and Content (Sidebars + Main) */
+    gap: 10px;
+    height: 100vh;
+    grid-template-areas: 
+        "header header header"
+        "left-sidebar main right-sidebar";
+    padding: 10px;
+}
+
+/* Styling the header */
+header {
+    grid-area: header;
+    background-color: #a636e3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling the left sidebar */
+.left-sidebar {
+    grid-area: left-sidebar;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.left-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* Styling the main content */
+main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Styling the right sidebar */
+.right-sidebar {
+    grid-area: right-sidebar;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
