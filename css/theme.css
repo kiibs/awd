@@ -1,32 +1,32 @@
 :root {
     /* Custom color palette */
-    --background: hsla(209, 12%, 22%, 1); /* #323B42 */
-    --foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+    --background: rgb(224, 98, 113); /* #323B42 */
+    --foreground: rgb(227, 227, 22); /* #FCFBF9 */
 
-    --card: hsla(24, 29%, 80%, 1); /* #D9C7BE */
-    --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+    --card: rgb(116, 198, 147); /* #D9C7BE */
+    --card-foreground: rgb(9, 109, 208); /* #323B42 */
 
-    --popover: hsla(24, 29%, 80%, 1); /* #D9C7BE */
+    --popover: rgb(25, 101, 79); /* #D9C7BE */
     --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
 
-    --primary: hsla(16, 5%, 39%, 1); /* #635B58 */
+    --primary: rgb(180, 88, 48); /* #635B58 */
     --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
 
-    --secondary: hsla(28, 13%, 61%, 1); /* #A59B95 */
+    --secondary: rgb(163, 157, 224); /* #A59B95 */
     --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
 
-    --muted: hsla(24, 6%, 48%, 1); /* #8C817B */
-    --muted-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+    --muted: rgb(10, 92, 30); /* #8C817B */
+    --muted-foreground: rgb(202, 202, 83); /* #FCFBF9 */
 
-    --accent: hsla(28, 12%, 68%, 1); /* #B5A79F */
-    --accent-foreground: hsla(16, 5%, 39%, 1); /* #635B58 */
+    --accent: rgb(202, 109, 28); /* #B5A79F */
+    --accent-foreground: rgb(225, 178, 158); /* #635B58 */
 
-    --destructive: hsla(10, 12%, 21%, 1); /* #3B3634 */
-    --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+    --destructive: rgb(226, 21, 213); /* #3B3634 */
+    --destructive-foreground: rgb(225, 158, 191); /* #FCFBF9 */
 
-    --border: hsla(28, 13%, 61%, 1); /* #A59B95 */
-    --input: hsla(28, 12%, 68%, 1); /* #B5A79F */
-    --ring: hsla(209, 12%, 22%, 1); /* #323B42 */
+    --border: rgb(190, 90, 205); /* #A59B95 */
+    --input: rgb(226, 129, 44); /* #B5A79F */
+    --ring: rgb(32, 83, 134); /* #323B42 */
 
 
     /* Combinations */
