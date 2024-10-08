@@ -1,32 +1,35 @@
 :root {
     /* Custom color palette */
-    --background: rgb(224, 98, 113); /* #323B42 */
-    --foreground: rgb(227, 227, 22); /* #FCFBF9 */
+    --background: rgb(255, 234, 250); /* #323B42 */
+    --foreground: rgb(0, 0, 0); /* #FCFBF9 */
 
-    --card: rgb(116, 198, 147); /* #D9C7BE */
-    --card-foreground: rgb(9, 109, 208); /* #323B42 */
+    --card: rgb(255, 224, 184); /* #D9C7BE */
+    --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
 
-    --popover: rgb(25, 101, 79); /* #D9C7BE */
-    --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+    --popover: rgb(255, 152, 234); /* #D9C7BE */
+    --popover-foreground: rgb(255, 255, 255); /* #323B42 */
 
-    --primary: rgb(180, 88, 48); /* #635B58 */
-    --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+    --primary: rgb(255, 147, 183); /* #635B58 */
+    --primary-foreground: rgb(0, 0, 0); /* #FCFBF9 */
 
-    --secondary: rgb(163, 157, 224); /* #A59B95 */
-    --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+    --secondary: rgb(255, 213, 221); /* #A59B95 */
+    --secondary-foreground: rgb(0, 0, 0); /* #323B42 */
 
-    --muted: rgb(10, 92, 30); /* #8C817B */
-    --muted-foreground: rgb(202, 202, 83); /* #FCFBF9 */
+    --muted: rgb(255, 84, 161); /* #8C817B */
+    --muted-foreground: rgb(255, 255, 255); /* #FCFBF9 */
 
-    --accent: rgb(202, 109, 28); /* #B5A79F */
-    --accent-foreground: rgb(225, 178, 158); /* #635B58 */
+    --accent: rgb(255, 92, 47); /* #B5A79F */
+    --accent-foreground: rgb(255, 242, 236); /* #635B58 */
 
-    --destructive: rgb(226, 21, 213); /* #3B3634 */
-    --destructive-foreground: rgb(225, 158, 191); /* #FCFBF9 */
+    --destructive: rgb(231, 66, 66); /* #3B3634 */
+    --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
 
-    --border: rgb(190, 90, 205); /* #A59B95 */
-    --input: rgb(226, 129, 44); /* #B5A79F */
-    --ring: rgb(32, 83, 134); /* #323B42 */
+    --border: rgb(249, 255, 236); /* #A59B95 */
+    --input: rgb(222, 241, 255); /* #B5A79F */
+    --ring: rgb(215, 235, 255); /* #323B42 */
+
+    
+
 
 
     /* Combinations */
@@ -65,3 +68,5 @@
         color: var(--destructive-foreground);
     }
 }
+
+
