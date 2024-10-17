@@ -13,8 +13,8 @@ body {
 }
 
 .container {
-    width: 80%;
-    max-width: 1200px;
+    width: 75%; /* Ajustado para que ocupe tres cuartos del ancho de la ventana */
+    max-width: 800px;
     text-align: center;
 }
 
@@ -34,8 +34,8 @@ header h3 {
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: column; /* Las tarjetas se apilan verticalmente */
     gap: 20px;
 }
 
@@ -45,6 +45,7 @@ main {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 100%; /* Las tarjetas ocupan todo el ancho del contenedor */
 }
 
 .card h2 {
