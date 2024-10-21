@@ -3,7 +3,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #94d8ff;
+    background-color: #fff9f0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,12 +15,12 @@ body {
 
 .container {
     width: 75%; /* Ajustado para que ocupe tres cuartos del ancho de la ventana */
-    max-width: 800px;
+    max-width: 1250px;
     text-align: center;
 }
 
 header {
-    margin-bottom: 20px;
+    margin: 50px;
 }
 
 header h1 {
@@ -37,12 +37,18 @@ header h3 {
 main {
     display: flex;
     gap: 20px;
+    flex-direction: column;
+}
+
+.award {
+    font-size:xx-large;
+    color: #00ffd9;
+    text-align:right;
 }
 
 .card {
     background-color: white;
-    border-radius: 10px;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 100%; /* Las tarjetas ocupan todo el ancho del contenedor */
@@ -53,6 +59,23 @@ main {
     margin-bottom: 10px;
 }
 
+.custom-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color del texto del elemento padre */
+    cursor: pointer; /* Cambia el cursor para que parezca clicable */
+}
+
+.custom-link-award {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color del texto del elemento padre */
+    cursor: pointer; /* Cambia el cursor para que parezca clicable */
+}
+
+.custom-link:hover, .custom-link-award:hover {
+    color: #ff0077; /* Cambia el color al pasar el ratón (opcional) */
+}
+
+
 .card p {
     font-size: 1em;
     color: #666;
@@ -62,12 +85,11 @@ main {
 .image-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 15px;
+    padding: 20px;
 }
 
 .image-container img {
-    width: 32%;
+    width: 30%;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
