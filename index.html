@@ -10,28 +10,30 @@
     </head>
 
     <body>
-        <!-- Header -->
-        <!-- Recommended semantic nav
-              https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
-        -->
-        <header>
-            <nav class="navbar">
-                <a href="#" class="nav-icon">
-                    <img src="../assets/icons/Halloween-Cute-Ghost.svg" alt="Logo">
-                </a>
-                <input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
-                <label class="nav-menu" for="nav-menu-btn">
-                    <span class="nav-menu-icon" />
+        
+        <header class="navbar">
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
+            <div class="nav-container">
+                <input type="checkbox" class="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
                 </label>
-                <ul class="nav-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+                <nav class="menu-items">
+                    <ul>
+                        <li><a href="webs-analysis.html">Web Analysis</a></li>
+                        <li><a href="section2.html">Section 2</a></li>
+                        <li><a href="section3.html">Section 3</a></li>
+                        <li><a href="section4.html">Section 4</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <!-- Main Content Area with Grid Layout -->
+        
         <main>
             <div class="fluid-grid-container">
                 <div class="grid-item">
