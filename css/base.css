@@ -11,6 +11,9 @@
     box-sizing: border-box;
 }
 
+h2 {font-family: 'OCRA'; }
+p {font-family: 'OCR-B'; }
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -24,11 +27,14 @@ body {
 }
 
 
+
 /*  When the body has display: flex;, 
     its children (header, footer, and main) become flex items. 
     Flex items do not expand to fill their container's width
     unless you explicitly set their width.
 */
+
+
 
 main {
     width: 100%; /* Make sure it takes full width */
