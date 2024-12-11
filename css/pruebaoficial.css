@@ -1,0 +1,98 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Change typography here: */
+body {
+    font-family: 'Poppins', sans-serif;  /* You can replace 'Poppins' with any Google Font */
+    background-color: #f5f5f5;
+}
+
+/* Header container styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;  /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo img {
+    height: 50px;
+}
+
+/* Hamburger menu container */
+.hamburger-menu {
+    position: relative;
+}
+
+/* Colorful hamburger icon */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Colorful gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s;
+}
+
+/* Hamburger menu content */
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    text-align: center;
+}
+
+/* Show menu when hamburger is clicked */
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the PNGs inside the menu */
+.menu img {
+    width: 80px;
+    margin: 10px 0;  /* Space between images */
+}
+
+/* Navigation links */
+.nav {
+    display: flex;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Gradient color */
+    -webkit-background-clip: text;  /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent;  /* Make text transparent to show gradient */
+    transition: opacity 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.8;  /* Slight transparency on hover */
+}

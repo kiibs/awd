@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Página Súper Interactiva!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s ease;
+        }
+
+        .counter {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            position: absolute;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            background-color: #007BFF;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .slider-container label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .slider-container input {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter" id="clickCounter">Clics: 0</div>
+    
+    <button id="movableButton" onclick="interact()">¡Atrápame!</button>
+    <button id="surpriseButton" class="hidden" onclick="surprise()">¡Sorpresa!</button>
+
+    <div class="controls">
+        <div class="slider-container">
+            <label for="speedSlider">Velocidad:</label>
+            <input id="speedSlider" type="range" min="0.1" max="1" step="0.1" value="0.5">
+        </div>
+        <div class="slider-container">
+            <label for="sizeSlider">Tamaño:</label>
+            <input id="sizeSlider" type="range" min="50" max="200" step="10" value="100">
+        </div>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+    <audio id="surpriseSound" src="https://www.soundjay.com/button/beep-09.mp3"></audio>
+
+    <script>
+        let clickCount = 0;
+        const button = document.getElementById('movableButton');
+        const counter = document.getElementById('clickCounter');
+        const surpriseButton = document.getElementById('surpriseButton');
+        const clickSound = document.getElementById('clickSound');
+        const surpriseSound = document.getElementById('surpriseSound');
+        const speedSlider = document.getElementById('speedSlider');
+        const sizeSlider = document.getElementById('sizeSlider');
+
+        function interact() {
+            // Incrementar contador
+            clickCount++;
+            counter.textContent = `Clics: ${clickCount}`;
+
+            // Reproducir sonido
+            clickSound.currentTime = 0;
+            clickSound.play();
+
+            // Cambiar posición
+            const randomX = Math.random() * (window.innerWidth - button.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+
+            // Cambiar color y rotación
+            const randomColor = `hsl(${Math.random() * 360}, 70%, 50%)`;
+            button.style.backgroundColor = randomColor;
+            button.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            // Aparición aleatoria del botón sorpresa
+            if (Math.random() > 0.7) {
+                surpriseButton.classList.remove('hidden');
+                surpriseButton.style.left = `${Math.random() * (window.innerWidth - surpriseButton.offsetWidth)}px`;
+                surpriseButton.style.top = `${Math.random() * (window.innerHeight - surpriseButton.offsetHeight)}px`;
+            }
+        }
+
+        function surprise() {
+            // Reproducir sonido sorpresa
+            surpriseSound.currentTime = 0;
+            surpriseSound.play();
+
+            // Cambiar el fondo a un color aleatorio
+            document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 90%, 85%)`;
+
+            // Esconder el botón sorpresa
+            surpriseButton.classList.add('hidden');
+        }
+
+        // Ajustar velocidad
+        speedSlider.addEventListener('input', (e) => {
+            button.style.transitionDuration = `${e.target.value}s`;
+        });
+
+        // Ajustar tamaño
+        sizeSlider.addEventListener('input', (e) => {
+            button.style.width = `${e.target.value}px`;
+            button.style.height = `${e.target.value}px`;
+        });
+    </script>
+</body>
+</html>

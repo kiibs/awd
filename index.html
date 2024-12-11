@@ -36,6 +36,30 @@
 
         
         <main>
+            <!-- Example 1: Adding, Modifying, and Removing Elements -->
+		<h2>1. Adding, Modifying, and Removing Elements</h2>
+		<div id="container">Hello!</div>
+		<button onclick="addElement()">Add Element</button>
+		<button onclick="removeElement()">Remove Element</button>
+
+        <script>
+			// Example 1: Adding, Modifying, and Removing Elements
+			function addElement() {
+				const newElement = document.createElement('p');
+				newElement.textContent = 'This is a new paragraph.';
+				document.getElementById('container').appendChild(newElement);
+			}
+
+            function removeElement() {
+				const container = document.getElementById('container');
+				if (container.lastChild) {
+					container.removeChild(container.lastChild);
+				}
+			}
+            </script>
+
+
+
             <div class="fluid-grid-container">
                 <div class="grid-item">
                     <h2>Grid Item 1</h2>
