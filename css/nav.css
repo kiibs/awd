@@ -1,104 +1,87 @@
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    background-color: #f0f0f0;
-}
-
-/* Navbar styles */
-.navbar {
+/* Header container styling */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    background-color: #ff93b7;
-    color: #fff;
-    height: 60px;
+    padding: 15px 20px;
+    background-color: white;  /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Logo styles */
-.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.2rem;
+/* Logo styling */
+.logo img {
+    height: 50px;
 }
 
-/* Hamburger Menu styles */
-.nav-container {
+/* Hamburger menu container */
+.hamburger-menu {
     position: relative;
 }
 
-.checkbox {
-    display: none;
-}
-
-.hamburger-lines {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
+/* Colorful hamburger icon */
+.menu-icon {
+    font-size: 28px;
     cursor: pointer;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Colorful gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s;
 }
 
-.hamburger-lines .line {
-    height: 3px;
-    width: 100%;
-    background: #fff;
-    border-radius: 5px;
-}
-
-/* Menu items */
-.menu-items {
+/* Hamburger menu content */
+.menu {
     display: none;
     position: absolute;
-    right: 0;
-    top: 60px;
-    background-color: #0e2431;
-    border-radius: 5px;
-    padding: 15px;
-    width: 150px;
-    text-align: right;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    text-align: center;
 }
 
-.menu-items ul {
-    list-style: none;
+/* Show menu when hamburger is clicked */
+#menu-toggle {
+    display: none;
 }
 
-.menu-items li {
-    margin: 10px 0;
+#menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.menu-items a {
+/* Style the PNGs inside the menu */
+.menu img {
+    width: 80px;
+    margin: 10px 0;  /* Space between images */
+}
+
+/* Navigation links */
+.nav {
+    display: flex;
+}
+
+.nav a {
     text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Gradient color */
+    -webkit-background-clip: text;  /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent;  /* Make text transparent to show gradient */
+    transition: opacity 0.3s;
 }
 
-/* Checkbox: Checked styles for menu display */
-.checkbox:checked + .hamburger-lines + .menu-items {
-    display: block;
+.nav a:hover {
+    opacity: 0.8;  /* Slight transparency on hover */
 }
 
-/* Transform the hamburger menu into an 'X' when checked */
-.checkbox:checked + .hamburger-lines .line1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.checkbox:checked + .hamburger-lines .line2 {
-    opacity: 0;
-}
-
-.checkbox:checked + .hamburger-lines .line3 {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
