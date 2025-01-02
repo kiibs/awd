@@ -28,7 +28,7 @@
     font-size: 28px;
     cursor: pointer;
     background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Colorful gradient */
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: opacity 0.3s;
 }
@@ -76,7 +76,7 @@
     padding: 10px 20px;
     margin: 0 10px;
     background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Gradient color */
-    -webkit-background-clip: text;  /* Clip the gradient to the text */
+    background-clip: text;
     -webkit-text-fill-color: transparent;  /* Make text transparent to show gradient */
     transition: opacity 0.3s;
 }
