@@ -1,6 +1,5 @@
-
 /* Header container styling */
-.header {
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,23 +64,22 @@
 }
 
 /* Navigation links */
-.nav {
+.pages {
     display: flex;
 }
 
-.nav a {
+.pages a {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     padding: 10px 20px;
-    margin: 0 10px;
     background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Gradient color */
     background-clip: text;
     -webkit-text-fill-color: transparent;  /* Make text transparent to show gradient */
     transition: opacity 0.3s;
 }
 
-.nav a:hover {
+.pages a:hover {
     opacity: 0.8;  /* Slight transparency on hover */
 }
 

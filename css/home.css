@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background-color: rgba(53, 53, 53, 0.438);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  
+  .hero-content {
+    z-index: 1;
+  }
+
+  /* About Section */
+  .about {
+    padding: 3rem 1.5rem;
+    background: #f9f9f9;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-image img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  
+  /* Skills Section */
+  .skills {
+    background: #f7b42c;
+    color: white;
+    padding: 2rem 1.5rem;
+  }
+  
+  .skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skill {
+    margin-bottom: 1rem;
+  }
+  
+  .progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background: white;
+    height: 100%;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 3rem 1.5rem;
+    background: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact form input, .contact form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    background: #f7b42c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact button:hover {
+    background: #ff6f61;
+  }
+  

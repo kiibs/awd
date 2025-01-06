@@ -7,29 +7,29 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="hamburger-menu">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <div class="menu">
-          <img src="icon1.png" alt="Icon 1" />
-          <img src="icon2.png" alt="Icon 2" />
+    <header class="navigation">
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+          <div class="menu">
+            <img src="icon1.png" alt="Icon 1" />
+            <img src="icon2.png" alt="Icon 2" />
+          </div>
         </div>
-      </div>
-
-      <div class="logo">
-        <img src="logo.png" alt="Logo" />
-      </div>
-
-      <nav class="nav">
-        <a href="./home.html">Home</a>
-        <a href="./portfolio.html">Portfolio</a>
-        <a href="#">Inspiration</a>
-      </nav>
-    </header>
+  
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+  
+        <nav class="pages">
+          <a href="./home.html">Home</a>
+          <a href="./portfolio.html">Portfolio</a>
+          <a href="#">Inspiration</a>
+        </nav>
+      </header>
 
     <main class="gallery">
-      <a href="page1.html" class="gallery-item">
+      <a href="project.html" class="gallery-item">
         <img src="https://ik.imagekit.io/8udxss2ua/pimiento%20verde.jpg?updatedAt=1735934508081" alt="Image 1" />
       </a>
       <a href="page2.html" class="gallery-item wide">
@@ -50,57 +50,65 @@
       <a href="page1.html" class="gallery-item">
         <img src="./assets/images/jiddo1.png" alt="Image 1" />
       </a>
-      <a href="page2.html" class="gallery-item wide">
-        <img src="./assets/images/jiddo2.png" alt="Image 2" />
-      </a>
-      <a href="page3.html" class="gallery-item tall">
-        <img src="./assets/images/jiddo3.png" alt="Image 3" />
-      </a>
-      <a href="page4.html" class="gallery-item">
-        <img src="./assets/images/lusion1.png" alt="Image 4" />
-      </a>
-      <a href="page5.html" class="gallery-item wide-tall">
-        <img src="./assets/images/lusion2.png" alt="Image 5" />
-      </a>
-      <a href="page6.html" class="gallery-item">
-        <img src="./assets/images/lusion3.png" alt="Image 6" />
-      </a>
-      <a href="page1.html" class="gallery-item">
-        <img src="./assets/images/jiddo1.png" alt="Image 1" />
-      </a>
-      <a href="page2.html" class="gallery-item wide">
-        <img src="./assets/images/jiddo2.png" alt="Image 2" />
-      </a>
-      <a href="page3.html" class="gallery-item tall">
-        <img src="./assets/images/jiddo3.png" alt="Image 3" />
-      </a>
-      <a href="page4.html" class="gallery-item">
-        <img src="./assets/images/lusion1.png" alt="Image 4" />
-      </a>
-      <a href="page5.html" class="gallery-item wide-tall">
-        <img src="./assets/images/lusion2.png" alt="Image 5" />
-      </a>
-      <a href="page6.html" class="gallery-item">
-        <img src="./assets/images/lusion3.png" alt="Image 6" />
-      </a>
-      <a href="page1.html" class="gallery-item">
-        <img src="./assets/images/jiddo1.png" alt="Image 1" />
-      </a>
-      <a href="page2.html" class="gallery-item wide">
-        <img src="./assets/images/jiddo2.png" alt="Image 2" />
-      </a>
-      <a href="page3.html" class="gallery-item tall">
-        <img src="./assets/images/jiddo3.png" alt="Image 3" />
-      </a>
-      <a href="page4.html" class="gallery-item">
-        <img src="./assets/images/lusion1.png" alt="Image 4" />
-      </a>
-      <a href="page5.html" class="gallery-item wide-tall">
-        <img src="./assets/images/lusion2.png" alt="Image 5" />
-      </a>
-      <a href="page6.html" class="gallery-item">
-        <img src="./assets/images/lusion3.png" alt="Image 6" />
-      </a>
     </main>
+
+     <script>
+     document.querySelectorAll('.gallery-item').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    const link = item.getAttribute('href');
+    const img = item.querySelector('img');
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0; // Get header height
+
+    // Clone the image
+    const clone = img.cloneNode();
+    clone.style.position = 'fixed';
+    clone.style.top = `${img.getBoundingClientRect().top}px`;
+    clone.style.left = `${img.getBoundingClientRect().left}px`;
+    clone.style.width = `${img.offsetWidth}px`;
+    clone.style.height = `${img.offsetHeight}px`;
+    clone.style.transition = 'all 0.7s ease-in-out'; // Longer transition for smoother effect
+    clone.style.zIndex = '1000';
+    clone.style.objectFit = 'cover';
+
+    document.body.appendChild(clone);
+
+    // Step 1: Expand the image, considering the header
+    setTimeout(() => {
+      clone.style.top = `${headerHeight}px`; // Account for header height
+      clone.style.left = '50%';
+      clone.style.width = '100vw';
+      clone.style.height = `calc(100vh - ${headerHeight}px)`; // Reduce height by header
+      clone.style.transform = 'translate(-50%, 0)';
+    }, 10);
+
+    // Step 2: Add overlay and text after expansion
+    setTimeout(() => {
+      clone.style.opacity = '0.8'; // Lower transparency
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = `calc(${headerHeight}px + 50%)`;
+      overlay.style.left = '50%';
+      overlay.style.transform = 'translate(-50%, -50%)';
+      overlay.style.color = 'white';
+      overlay.style.fontSize = '2rem';
+      overlay.style.fontWeight = 'bold';
+      overlay.style.textShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
+      overlay.style.zIndex = '1001';
+      overlay.textContent = 'Project Title';
+      document.body.appendChild(overlay);
+    }, 700); // Ensure this happens after the image finishes expanding
+
+    // Step 3: Redirect to the new page
+    setTimeout(() => {
+      document.body.removeChild(clone);
+      window.location.href = link;
+    }, 1500); // Delay redirect to give time for visual effects
+  });
+});
+
+      </script>
+      
+
   </body>
 </html>

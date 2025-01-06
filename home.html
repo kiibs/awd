@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colorful Header</title>
+    <title>Home page</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
   </head>
 
   <body>
-    <header class="header">
+    <header class="navigation">
       <div class="hamburger-menu">
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -22,11 +22,90 @@
         <img src="logo.png" alt="Logo" />
       </div>
 
-      <nav class="nav">
+      <nav class="pages">
         <a href="./home.html">Home</a>
         <a href="./portfolio.html">Portfolio</a>
         <a href="#">Inspiration</a>
       </nav>
     </header>
+
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+          <h1>Hi! I'm Emma</h1>
+          <p>Developer | Designer | Innovator</p>
+        </div>
+      </header>
+    
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I'm a passionate software developer with a love for creating impactful
+                and engaging digital experiences. My journey began with a simple "Hello World," and now I work on crafting scalable web applications and innovative solutions.
+              </p>
+              <p>
+                When I'm not coding, I enjoy exploring art, playing guitar, and traveling to new destinations for inspiration.
+              </p>
+            </div>
+            <div class="about-image">
+              <img src="https://via.placeholder.com/400" alt="About Me" />
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>HTML & CSS</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3>React</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    
   </body>
+
+  <!-- Video element -->
+  <!--<video
+      class="fullscreen-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      src="https://ik.imagekit.io/8udxss2ua/sample-video.mp4?updatedAt=1735593975446"
+    >
+      Your browser does not support the video tag.
+    </video>-->
 </html>

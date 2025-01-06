@@ -1,0 +1,107 @@
+  /* Return */
+  .return-arrow {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
+    padding: 5px 12px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .return-arrow:hover {
+    transform: scale(1.1);
+  }
+  
+  .back-button {
+    display: block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
+    opacity: 0.7;
+  }
+
+  /* Project Header */
+  .project-header {
+    text-align: center;
+    position: relative;
+    /*margin: 0;*/
+  }
+  
+  .project-header .main-image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-header .main-image {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.7);
+  }
+  
+  .project-header .project-title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-header .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 20px;
+  }
+  
+  /* Project Gallery */
+  .project-gallery {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  
+  .project-gallery .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .project-gallery .gallery-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .project-gallery .gallery-row img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-gallery .gallery-row img:hover {
+    transform: scale(1.05);
+  }
+  
