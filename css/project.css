@@ -1,4 +1,4 @@
-  /* Return */
+/* Return */
   .return-arrow {
     position: fixed;
     top: 15px;
@@ -54,14 +54,12 @@
     filter: brightness(0.7);
   }
   
-  .project-header .project-title-overlay {
+  .project-title-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem;
-    font-weight: bold;
     text-align: center;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
@@ -73,35 +71,27 @@
     margin: 20px;
   }
   
-  /* Project Gallery */
-  .project-gallery {
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-  
+/* Project Gallery */
+
+.project-gallery .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  grid-auto-rows: 500px; /* Set a fixed height for rows */
+  justify-items: center;
+  align-items: center;
+}
+
+.project-gallery .gallery img {
+  width: 100%; /* Allows the width to adjust based on the image's aspect ratio */
+  height: 100%; /* Ensures all images fill the row height */
+  object-fit: cover; /* Keeps the image proportions while cropping if necessary */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
   .project-gallery .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minimum column width */
+    grid-auto-rows: 40vw; /* Increase row height for smaller screens */
   }
-  
-  .project-gallery .gallery-row {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-  }
-  
-  .project-gallery .gallery-row img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .project-gallery .gallery-row img:hover {
-    transform: scale(1.05);
-  }
-  
+}

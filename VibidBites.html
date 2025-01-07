@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="navigation">
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="menu">
+          <img src="icon1.png" alt="Icon 1" />
+          <img src="icon2.png" alt="Icon 2" />
+        </div>
+      </div>
+
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+
+      <nav class="pages">
+        <a href="./home.html">Home</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="#">Inspiration</a>
+      </nav>
+    </header>
+
+    <!-- Return Arrow -->
+    <a href="./portfolio.html" class="return-arrow"> &lt; </a>
+
+    <main class="project">
+      <!-- Main Image Section -->
+      <section class="project-header">
+        <div class="main-image-container">
+          <img
+            class="main-image"
+            src="https://ik.imagekit.io/8udxss2ua/pimiento%20verde.jpg?updatedAt=1735934508081"
+            alt="Project Main Image"
+          />
+          <div class="project-title-overlay">
+            <em>Vibid Bites</em>
+          </div>
+        </div>
+        <p class="description">
+          This is the project description. It provides details about the
+          project, its purpose, and the process involved in its creation.
+        </p>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="project-gallery">
+        <div class="gallery">
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/naranjas.jpg?updatedAt=1735934507564"
+            alt="Additional Image 1"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/DSC_0728.png?updatedAt=1735934505168"
+            alt="Additional Image 2"
+          />
+        </div>
+        <div class="gallery">
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/limones.jpg?updatedAt=1735934505269"
+            alt="Additional Image 3"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/peach.jpg?updatedAt=1735934507738"
+            alt="Additional Image 4"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/cuervo.jpg?updatedAt=1735934503366"
+            alt="Additional Image 5"
+          />
+          <!-- Add more images as needed -->
+        </div>
+      </section>
+
+      <!-- Gallery Section 
+      <section class="project-gallery">
+        <div class="gallery">
+          <!-- First Row 
+          <div class="gallery-row">
+            <img src="https://ik.imagekit.io/8udxss2ua/naranjas.jpg?updatedAt=1735934507564" alt="Additional Image 1" />
+            <img src="https://ik.imagekit.io/8udxss2ua/DSC_0728.png?updatedAt=1735934505168" alt="Additional Image 2" />
+          </div>
+          <!-- Second Row 
+          <div class="gallery-row">
+            <img src="https://ik.imagekit.io/8udxss2ua/limones.jpg?updatedAt=1735934505269" alt="Additional Image 3" />
+            <img src="https://ik.imagekit.io/8udxss2ua/peach.jpg?updatedAt=1735934507738" alt="Additional Image 4" />
+            <img src="https://ik.imagekit.io/8udxss2ua/cuervo.jpg?updatedAt=1735934503366" alt="Additional Image 5" />
+          </div>
+        </div>
+      </section> -->
+
+      <button class="back-button" onclick="goBack()">Back to Portfolio</button>
+    </main>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

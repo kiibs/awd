@@ -1,102 +1,169 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }  
-  
-  /* Hero Section */
-  .hero {
-    position: relative;
-    height: 100vh;
-    background-color: rgba(53, 53, 53, 0.438);
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
- 
-  
-  .hero-content {
-    z-index: 1;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* About Section */
-  .about {
-    padding: 3rem 1.5rem;
-    background: #f9f9f9;
+em {
+  font-family: "Gloria Hallelujah", serif;
+  font-weight: 400;
+  font-size: 70px;
+  font-style: normal;
+}
+
+.sectiontitles {
+  font-family: "Gloria Hallelujah", serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretch video to full width */
+  height: 100%; /* Stretch video to full height */
+  object-fit: cover; /* Ensures the video covers the area proportionally */
+  z-index: -2; /* Places video behind other elements */
+}
+
+/* Overlay for Text Contrast */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  z-index: -1; /* Places overlay above video but below content */
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
-  
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+  .hero-content p {
+    font-size: 1.2rem;
   }
-  
-  .about-text {
-    max-width: 600px;
+}
+
+/* Multicolor Band */
+.multicolor-band {
+  height: 20px; /* Adjust the height of the band */
+  width: 100%; /* Full width */
+  background: linear-gradient(
+    90deg,
+    #ff6f61,
+    #f7b42c,
+    #6ee7b7,
+    #42a5f5,
+    #ab47bc,
+    #ff6f61
+  ); /* Multicolor gradient */
+  background-size: 300%; /* Make the gradient larger than the viewport */
+  animation: moveColors 5s linear infinite; /* Smooth animation */
+}
+
+/* Animation */
+@keyframes moveColors {
+  0% {
+    background-position: 0%;
   }
-  
-  .about-image img {
-    width: 300px;
-    border-radius: 50%;
+  100% {
+    background-position: 100%;
   }
-  
-  /* Skills Section */
-  .skills {
-    background: #f7b42c;
-    color: white;
-    padding: 2rem 1.5rem;
-  }
-  
-  .skills-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .skill {
-    margin-bottom: 1rem;
-  }
-  
-  .progress-bar {
-    background: rgba(255, 255, 255, 0.3);
-    height: 8px;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .progress {
-    background: white;
-    height: 100%;
-  }
-  
-  /* Contact Section */
-  .contact {
-    padding: 3rem 1.5rem;
-    background: #333;
-    color: white;
-    text-align: center;
-  }
-  
-  .contact form input, .contact form textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 10px;
-  }
-  
-  .contact button {
-    padding: 10px 20px;
-    background: #f7b42c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact button:hover {
-    background: #ff6f61;
-  }
-  
+}
+
+/* About Section */
+.about {
+  padding: 10px 20px 70px 40px;
+  background: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 40%;
+}
+
+/* Skills Section */
+.skills {
+  background: #f7b42c;
+  color: white;
+  padding: 10px 20px 70px 40px;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background: white;
+  height: 100%;
+}
+
+/* Contact Section */
+.contact {
+  padding: 3rem 1.5rem;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #f7b42c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #ff6f61;
+}

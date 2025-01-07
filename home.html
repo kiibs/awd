@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -29,83 +35,112 @@
       </nav>
     </header>
 
-      <!-- Hero Section -->
-      <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-          <h1>Hi! I'm Emma</h1>
-          <p>Developer | Designer | Innovator</p>
-        </div>
-      </header>
-    
-      <!-- About Section -->
-      <section id="about" class="about">
-        <div class="container">
-          <h2>About Me</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                I'm a passionate software developer with a love for creating impactful
-                and engaging digital experiences. My journey began with a simple "Hello World," and now I work on crafting scalable web applications and innovative solutions.
-              </p>
-              <p>
-                When I'm not coding, I enjoy exploring art, playing guitar, and traveling to new destinations for inspiration.
-              </p>
-            </div>
-            <div class="about-image">
-              <img src="https://via.placeholder.com/400" alt="About Me" />
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Skills Section -->
-      <section id="skills" class="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-          <div class="skill">
-            <h3>JavaScript</h3>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>HTML & CSS</h3>
-            <div class="progress-bar">
-              <div class="progress" style="width: 95%"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <h3>React</h3>
-            <div class="progress-bar">
-              <div class="progress" style="width: 85%"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-    
-  </body>
+    <!-- Hero Section -->
+    <div class="hero">
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://ik.imagekit.io/8udxss2ua/17097914-uhd_3840_2160_30fps.mp4?updatedAt=1736203385205"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-  <!-- Video element -->
-  <!--<video
-      class="fullscreen-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      src="https://ik.imagekit.io/8udxss2ua/sample-video.mp4?updatedAt=1735593975446"
-    >
-      Your browser does not support the video tag.
-    </video>-->
+      <!-- Overlay for better text contrast -->
+      <div class="overlay"></div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <h1>Hi! I'm <em>Emma :)</em></h1>
+        <p>Designer | Developer | Innovator</p>
+      </div>
+    </div>
+
+    <div class="multicolor-band"></div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <em class="sectiontitles">About Me</em>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate graphic design student with a growing interest in
+              coding and a love for creating visually impactful and engaging
+              digital experiences. My journey into programming started with a
+              simple "Hello World," and while I'm still at the beginning of my
+              path, I'm excited to keep learning and improving my skills.
+            </p> <br>
+            <p>
+              When I'm not immersed in my studies, I enjoy exploring art,
+              playing the piano, and seeking inspiration through travel to new
+              destinations. There's a long road ahead, but I'm eager to combine
+              my design background with coding to bring creative visions to
+              life.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://ik.imagekit.io/8udxss2ua/fotito%20portfolio.jpg?updatedAt=1736204923044"
+              alt="About Me"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <em class="sectiontitles">My Skills</em>
+      <div class="skills-container">
+        <div class="skill">
+          <h3>Illustrator</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Indesign</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Photoshop</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>Cinema4D</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>HTML and CSS</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress-bar">
+            <div class="progress" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Get In Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </body>
 </html>
