@@ -51,7 +51,7 @@
     max-width: 100%;
     height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    filter: brightness(0.7);
+    filter: brightness(0.5);
   }
   
   .project-title-overlay {
@@ -64,34 +64,73 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .project-header .description {
+  .description {
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
-    margin: 20px;
+    margin: 5vw 20vw 0vw 20vw;
   }
   
 /* Project Gallery */
 
-.project-gallery .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
-  grid-auto-rows: 500px; /* Set a fixed height for rows */
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 30vw; /* Adjust row height dynamically based on viewport width */
   justify-items: center;
   align-items: center;
 }
 
+.gallery img {
+  width: 100%; /* Image width scales with its container */
+  height: 100%; /* Fills the container's height */
+  object-fit: cover; /* Keeps the aspect ratio while filling the container */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .project-gallery .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minimum column width */
+    grid-auto-rows: 40vw; /* Increase row height for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Project Gallery 
+  .project-gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
 .project-gallery .gallery img {
-  width: 100%; /* Allows the width to adjust based on the image's aspect ratio */
-  height: 100%; /* Ensures all images fill the row height */
-  object-fit: cover; /* Keeps the image proportions while cropping if necessary */
+  width: auto; /* Allows the width to adjust based on the image's aspect ratio 
+  height: 500px; /* Ensures all images fill the row height 
+  object-fit: cover; /* Keeps the image proportions while cropping if necessary 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1200px) {
   .project-gallery .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minimum column width */
-    grid-auto-rows: 40vw; /* Increase row height for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minimum column width 
+    grid-auto-rows: 40vw; /* Increase row height for smaller screens 
   }
 }
+*/
