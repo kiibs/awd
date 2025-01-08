@@ -1,0 +1,158 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Main error page container */
+  .error-page {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Error number styling */
+  .error-number {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ff6347; /* Tomato color */
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Error text message */
+  .error-text {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Subheading for more detailed info */
+  .subheading {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* CTA button */
+  .go-home-button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-home-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Floating geometric shapes */
+  .shapes {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+  }
+  
+  .circle, .square, .triangle {
+    position: absolute;
+    background-color: #f8c024;
+    animation: floatShapes 10s ease-in-out infinite;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff6347;
+  }
+  
+  .square {
+    width: 80px;
+    height: 80px;
+    background-color: #ff9f00;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid #6fa3ef;
+  }
+  
+  /* Animations for the shapes and error number */
+  @keyframes floatShapes {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .error-page {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .error-number {
+      font-size: 5rem;
+    }
+  
+    .error-text {
+      font-size: 1.3rem;
+    }
+  
+    .subheading {
+      font-size: 0.9rem;
+    }
+  
+    .go-home-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  

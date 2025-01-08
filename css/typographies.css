@@ -1,0 +1,21 @@
+/* Change typography here: */
+body {
+    font-family: 'Poppins', sans-serif;  /* You can replace 'Poppins' with any Google Font */
+    background-color: #ffffff;
+}
+
+em {
+    font-family: "Gloria Hallelujah", serif;
+    font-weight: 400;
+    font-size: 70px;
+    font-style: normal;
+  }
+  
+  .sectiontitles {
+    font-family: "Gloria Hallelujah", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+  }
+  
+  
