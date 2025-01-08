@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Details</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="manifest" href="manifest.json">
-
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <header class="navigation">
@@ -43,7 +42,7 @@
             alt="Project Main Image"
           />
           <div class="project-title-overlay">
-            <h1>Project Title</h1>
+            <h1>Parque de Atracciones <br> (Madrid)</h1>
           </div>
         </div>
         <p class="description">
@@ -54,38 +53,72 @@
 
       <!-- Gallery Section -->
       <section class="project-gallery">
+        <!-- First Row -->
         <div class="gallery">
-          <!-- First Row -->
-          <div class="gallery-row">
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/billboard.png?updatedAt=1736252809683" alt="Additional Image 1" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/brochure.png?updatedAt=1736252804598" alt="Additional Image 2" />
-          </div>
-          <!-- Second Row -->
-          <div class="gallery-row">
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/brochure.png?updatedAt=1736252804598" alt="Additional Image 3" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/oficina%20interior.png?updatedAt=1736252772872" alt="Additional Image 4" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/papeler%C3%ADa%20corporativa.png?updatedAt=1736252770074" alt="Additional Image 5" />
-          </div>
-          <div class="gallery-row">
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/gorra.png?updatedAt=1736252791546" alt="Additional Image 1" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/mascarilla.png?updatedAt=1736252782349" alt="Additional Image 2" />
-          </div>
-          <!-- Second Row -->
-          <div class="gallery-row">
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/coche.png?updatedAt=1736252816004" alt="Additional Image 3" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/furgoneta.png?updatedAt=1736252789777" alt="Additional Image 5" />
-            <img src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/contenedor%20shipping.png?updatedAt=1736252811746" alt="Additional Image 4" />
-          </div>
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/billboard.png?updatedAt=1736252809683"
+            alt="Additional Image 1"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/brochure.png?updatedAt=1736252804598"
+            alt="Additional Image 2"
+          />
+        </div>
+        <!-- Second Row -->
+        <div class="gallery">
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/brochure.png?updatedAt=1736252804598"
+            alt="Additional Image 3"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/oficina%20interior.png?updatedAt=1736252772872"
+            alt="Additional Image 4"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/papeler%C3%ADa%20corporativa.png?updatedAt=1736252770074"
+            alt="Additional Image 5"
+          />
+        </div>
+        <!-- Third Row -->
+        <div class="gallery">
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/gorra.png?updatedAt=1736252791546"
+            alt="Additional Image 6"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/mascarilla.png?updatedAt=1736252782349"
+            alt="Additional Image 7"
+          />
+        </div>
+        <!-- Forth Row -->
+        <div class="gallery">
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/coche.png?updatedAt=1736252816004"
+            alt="Additional Image 8"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/furgoneta.png?updatedAt=1736252789777"
+            alt="Additional Image 9"
+          />
+          <img
+            src="https://ik.imagekit.io/8udxss2ua/parque%20atracciones/contenedor%20shipping.png?updatedAt=1736252811746"
+            alt="Additional Image 10"
+          />
+        </div>
+
+        <div class="modal" id="imageModal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage" />
+
+          <!-- Navigation Arrows -->
+          <div class="arrow left" id="prev">&lt;</div>
+          <div class="arrow right" id="next">&gt;</div>
         </div>
       </section>
 
       <button class="back-button" onclick="goBack()">Back to Portfolio</button>
     </main>
 
-    <script>
-      function goBack() {
-        window.history.back();
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
