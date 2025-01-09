@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: white;  /* White background */
+    background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -12,7 +12,13 @@
     z-index: 1000;
 }
 
-/* Logo styling */
+.navigation .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 .logo img {
     height: 50px;
 }
@@ -20,13 +26,13 @@
 /* Hamburger menu container */
 .hamburger-menu {
     position: relative;
+    z-index: 101;
 }
 
-/* Colorful hamburger icon */
 .menu-icon {
     font-size: 28px;
     cursor: pointer;
-    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Colorful gradient */
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: opacity 0.3s;
@@ -57,10 +63,9 @@
     align-items: center;
 }
 
-/* Style the PNGs inside the menu */
 .menu img {
     width: 80px;
-    margin: 10px 0;  /* Space between images */
+    margin: 10px 0; 
 }
 
 /* Navigation links */
@@ -73,13 +78,12 @@
     font-weight: bold;
     font-size: 18px;
     padding: 10px 20px;
-    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7); /* Gradient color */
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
     background-clip: text;
-    -webkit-text-fill-color: transparent;  /* Make text transparent to show gradient */
+    -webkit-text-fill-color: transparent; 
     transition: opacity 0.3s;
 }
 
 .pages a:hover {
-    opacity: 0.8;  /* Slight transparency on hover */
+    opacity: 0.8; 
 }
-

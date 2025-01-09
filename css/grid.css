@@ -74,6 +74,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
+    padding: 20px;
   }
   
   .inspiration-item {
@@ -81,19 +82,9 @@
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .inspiration-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Parallax Effect */
-  .parallax-bg {
-    background-attachment: fixed;
-  }
-  
+ 
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .gallery {
