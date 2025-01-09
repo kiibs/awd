@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="manifest" href="manifest.json">
-
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="icon"
+      href="assets/favicons/icons8-my-melody-color-32.png"
+      type="image/png"
+    />
   </head>
   <body>
     <header class="navigation">
@@ -32,85 +36,120 @@
 
     <main class="gallery">
       <a href="VibidBites.html" class="gallery-item">
-        <img src="https://ik.imagekit.io/8udxss2ua/pimiento%20verde.jpg?updatedAt=1735934508081" alt="Image 1" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/pimiento%20verde.jpg?updatedAt=1735934508081"
+          alt="Image 1"
+        />
       </a>
       <a href="ParqueAtracciones.html" class="gallery-item wide">
-        <img src="https://ik.imagekit.io/8udxss2ua/poster%20pared.png?updatedAt=1735934505848" alt="Image 2" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/poster%20pared.png?updatedAt=1735934505848"
+          alt="Image 2"
+        />
       </a>
       <a href="TheArtOfEdibleContrast.html" class="gallery-item tall">
-        <img src="https://ik.imagekit.io/8udxss2ua/theartofediblecontrast/mockupmag1.png?updatedAt=1736252839264" alt="Image 3" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/theartofediblecontrast/mockupmag1.png?updatedAt=1736252839264"
+          alt="Image 3"
+        />
       </a>
       <a href="404.html" class="gallery-item">
         <img src="./assets/images/lusion1.png" alt="Image 4" />
       </a>
       <a href="blackandwhite.html" class="gallery-item wide-tall">
-        <img src="https://ik.imagekit.io/8udxss2ua/black&white/Agatiello-Emma-contrast1.jpg?updatedAt=1736367087208" alt="Image 5" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/black&white/Agatiello-Emma-contrast1.jpg?updatedAt=1736367087208"
+          alt="Image 5"
+        />
       </a>
       <a href="Miniso.html" class="gallery-item">
-        <img src="https://ik.imagekit.io/8udxss2ua/miniso%203d/Agatiello.Emma_3.1_Render_with_materials.png?updatedAt=1736373938218" alt="Image 6" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/miniso%203d/Agatiello.Emma_3.1_Render_with_materials.png?updatedAt=1736373938218"
+          alt="Image 6"
+        />
       </a>
       <a href="Geperudeta.html" class="gallery-item">
-        <img src="https://ik.imagekit.io/8udxss2ua/Geperudeta/ETIQUETAS%20VINO%20TINTO-03.png?updatedAt=1736376310222" alt="Image 1" />
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/Geperudeta/ETIQUETAS%20VINO%20TINTO-03.png?updatedAt=1736376310222"
+          alt="Image 7"
+        />
+      </a>
+      <a href="Beer.html" class="gallery-item">
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/CERVEZA/3botellas-delante.png?updatedAt=1736380007090"
+          alt="Image 8"
+        />
+      </a>
+      <a href="ChildrenBooks.html" class="gallery-item">
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/ilustracion-cuentos/cuentosemmamockup.png?updatedAt=1736379776040"
+          alt="Image 9"
+        />
+      </a>
+      <a href="Magazine.html" class="gallery-item">
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/ilustracion-revista/Mockup.png?updatedAt=1736379714996"
+          alt="Image 10"
+        />
+      </a>
+      <a href="EnvelopeInvitation.html" class="gallery-item">
+        <img
+          src="https://ik.imagekit.io/8udxss2ua/sobreinvitacion/Invitation-Stationery-Envelope-Free-Mockup%20(1).png?updatedAt=1736381816473"
+          alt="Image 11"
+        />
       </a>
     </main>
-<!---
-     <script>
-     document.querySelectorAll('.gallery-item').forEach((item) => {
-  item.addEventListener('click', (event) => {
-    event.preventDefault();
-    const link = item.getAttribute('href');
-    const img = item.querySelector('img');
-    const headerHeight = document.querySelector('header')?.offsetHeight || 0; // Get header height
 
-    // Clone the image
-    const clone = img.cloneNode();
-    clone.style.position = 'fixed';
-    clone.style.top = `${img.getBoundingClientRect().top}px`;
-    clone.style.left = `${img.getBoundingClientRect().left}px`;
-    clone.style.width = `${img.offsetWidth}px`;
-    clone.style.height = `${img.offsetHeight}px`;
-    clone.style.transition = 'all 0.7s ease-in-out'; // Longer transition for smoother effect
-    clone.style.zIndex = '1000';
-    clone.style.objectFit = 'cover';
+    <footer>
+      <div class="wave"></div>
+      <div class="container">
+        <!-- Navigation Links -->
+        <div class="links">
+          <a href="home.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="inspiration.html">Inspiration</a>
+        </div>
 
-    document.body.appendChild(clone);
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p>
+            Email: <a href="mailto:emma@agatiello.net">emma@agatiello.net</a>
+          </p>
+          <p>Phone: <a href="tel:+34691475924">+34 691 47 59 24</a></p>
+          <p>Based in: Madrid, Spain</p>
+        </div>
 
-    // Step 1: Expand the image, considering the header
-    setTimeout(() => {
-      clone.style.top = `${headerHeight}px`; // Account for header height
-      clone.style.left = '50%';
-      clone.style.width = '100vw';
-      clone.style.height = `calc(100vh - ${headerHeight}px)`; // Reduce height by header
-      clone.style.transform = 'translate(-50%, 0)';
-    }, 10);
-
-    // Step 2: Add overlay and text after expansion
-    setTimeout(() => {
-      clone.style.opacity = '0.8'; // Lower transparency
-      const overlay = document.createElement('div');
-      overlay.style.position = 'fixed';
-      overlay.style.top = `calc(${headerHeight}px + 50%)`;
-      overlay.style.left = '50%';
-      overlay.style.transform = 'translate(-50%, -50%)';
-      overlay.style.color = 'white';
-      overlay.style.fontSize = '2rem';
-      overlay.style.fontWeight = 'bold';
-      overlay.style.textShadow = '0 4px 8px rgba(0, 0, 0, 0.5)';
-      overlay.style.zIndex = '1001';
-      overlay.textContent = 'Project Title';
-      document.body.appendChild(overlay);
-    }, 700); // Ensure this happens after the image finishes expanding
-
-    // Step 3: Redirect to the new page
-    setTimeout(() => {
-      document.body.removeChild(clone);
-      window.location.href = link;
-    }, 1500); // Delay redirect to give time for visual effects
-  });
-});
-
-      </script>
-      -->
-
+        <!-- Social Media Links -->
+        <div class="social-links">
+          <a
+            href="https://www.behance.net/nikora200471"
+            target="_blank"
+            class="social-link"
+          >
+            <img
+              src="./assets/icons/behance-1.svg"
+              alt="Behance"
+              class="social-icon"
+            />
+            Behance
+          </a>
+          <a
+            href="https://www.linkedin.com/in/emmaagatiello/"
+            target="_blank"
+            class="social-link"
+          >
+            <img
+              src="./assets/icons/icons8-linkedin.svg"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Emma Agatiello. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
