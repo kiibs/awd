@@ -1,20 +1,23 @@
 {
-    "name": "Project Gallery",
-    "short_name": "Gallery",
-    "start_url": "/home.html",
+    "name": "Portfolio Website",
+    "short_name": "Portfolio",
+    "start_url": "./home.html",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#333333",
+    "background_color": "white",
+    "theme_color": "linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7)",
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/icons/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
+        "src": "./assets/icons/behance-1.svg",
+        "type": "image/svg"
       },
       {
-        "src": "/icons/icon-512x512.png",
-        "sizes": "512x512",
+        "src": "./assets/icons/icons8-linkedin.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "./assets/favicons/icons8-my-melody-windows-11-color-32.png",
+        "sizes": "32x32",
         "type": "image/png"
       }
     ]
