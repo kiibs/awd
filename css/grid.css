@@ -45,6 +45,55 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.inspiration-header {
+    height: 100vh;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .header-description {
+    font-size: 1.5rem;
+    max-width: 600px;
+  }
+  
+  /* Grid Section */
+  .inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+  }
+  
+  .inspiration-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .inspiration-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Parallax Effect */
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+  
 /* Responsive Design */
 @media (max-width: 768px) {
     .gallery {
