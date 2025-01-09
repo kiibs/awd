@@ -32,7 +32,7 @@
   .error-number {
     font-size: 6rem;
     font-weight: 700;
-    color: #ff6347; /* Tomato color */
+    color: #ff00d4; /* Tomato color */
     margin-bottom: 15px;
     animation: fadeIn 2s ease-in-out;
   }
@@ -54,7 +54,7 @@
   /* CTA button */
   .go-home-button {
     padding: 12px 25px;
-    background-color: #007bff;
+    background-color: #5d00ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -64,7 +64,7 @@
   }
   
   .go-home-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to right, #ff6f61, #f7b42c, #6ee7b7);
   }
   
   /* Floating geometric shapes */
