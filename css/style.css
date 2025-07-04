@@ -1,0 +1,123 @@
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --accent: #d6cce6;
+    --transition: 0.3s ease;
+  }
+  
+  body.dark {
+    --bg: #1a1a1a;
+    --text: #f1f1f1;
+    --accent: #837aa5;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background var(--transition), color var(--transition);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--accent);
+    background-color: var(--bg);
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    color: #000;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-icon:hover {
+    transform: scale(1.2);
+    color: var(--accent);
+  }
+  
+
+  .navbar a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: color var(--transition);
+  }
+  
+  .navbar a:hover {
+    color: var(--accent);
+  }
+  
+  .logo {
+    font-family: 'Charis SIL', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .info {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  .info li {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer {
+    background-color: #f6e9ff; /* pastel lavanda, puedes cambiarlo a menta o beige */
+    color: var(--text);
+    border-top: 1px solid var(--accent);
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  footer .socials a {
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: color var(--transition);
+  }
+  
+  footer .socials a:hover {
+    color: var(--accent);
+  }
+  
+  .socials a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: color var(--transition);
+  }
+  
+  .socials a:hover {
+    color: var(--accent);
+  }
+  
