@@ -41,7 +41,6 @@
     color: var(--accent);
   }
   
-
   .navbar a {
     margin-left: 1rem;
     text-decoration: none;
@@ -91,7 +90,7 @@
   }
   
   footer {
-    background-color: #f6e9ff; /* pastel lavanda, puedes cambiarlo a menta o beige */
+    background-color: #f6e9ff; /* pastel lavanda */
     color: var(--text);
     border-top: 1px solid var(--accent);
     text-align: center;
@@ -121,9 +120,9 @@
     color: var(--accent);
   }
   
-/* Carrusel (con pausa en hover) */
-.carousel {
-    width: 100%;
+  /* Carrusel modificado */
+  .carousel {
+    width: 100vw; /* Aseguramos ancho de viewport */
     height: 60vh;
     overflow: hidden;
     position: relative;
@@ -132,6 +131,7 @@
   
   .slides {
     display: flex;
+    width: 200%; /* Doble del contenedor porque hay 6 imágenes */
     animation: scrollInfinite 30s linear infinite;
   }
   
@@ -140,7 +140,7 @@
   }
   
   .slides img {
-    width: 100vw;               /* Cada imagen ocupa 100% del viewport */
+    width: calc(100% / 6); /* Cada imagen ocupa 1/6 del total */
     height: auto;
     max-height: 60vh;
     object-fit: contain;
@@ -153,8 +153,12 @@
   }
   
   @keyframes scrollInfinite {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-300%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   
   /* Texto debajo del carrusel */
