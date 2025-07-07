@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Mueve el carrusel cada 3 segundos (ajusta a tu gusto)
-    setInterval(moveSlides, 3000);
+    setInterval(moveSlides, 2000);
   });
   

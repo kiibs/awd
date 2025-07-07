@@ -146,7 +146,6 @@
   padding: 0;
   border: none;
   outline: none;
-  vertical-align: top;
 }
 
   /* Texto debajo del carrusel */
@@ -174,5 +173,124 @@
   
   .see-more a:hover .arrow {
     transform: translateX(4px);
+  }
+  
+  /* Footer Styles */
+footer {
+    position: relative;
+    background: var(--bg);
+    color: var(--text);
+    padding: 50px 20px;
+    border-top: 1px solid var(--accent);
+  }
+  
+  /* Footer Content Container */
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea parte superior */
+    flex-wrap: wrap;         /* Permite que se acomode en pantallas pequeñas */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  /* Navigation Links */
+  footer .links,
+  footer .contact-info,
+  footer .social-links {
+    flex: 1 1 250px; /* Ajusta ancho mínimo, flexible para responsive */
+  }
+  
+  footer .links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  footer .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  
+  /* Contact Info */
+  footer .contact-info {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  footer .contact-info a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  
+  footer .contact-info a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  
+  /* Social Media Links */
+  footer .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 999px; /* pill shape */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  footer .social-link:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+  
+  footer .social-link:hover .social-icon {
+    filter: brightness(0) invert(1); /* vuelve blanco el icono al hacer hover */
+  }
+  
+  footer .social-icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+  }
+  
+  
+  /* Footer Bottom */
+  footer .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  /* Dark Mode Support */
+  body.dark footer {
+    color: var(--text);
+  }
+  
+  body.dark footer .footer-bottom {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    footer .container {
+      gap: 20px;
+    }
+  
+    footer .links,
+    footer .social-links {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
   
