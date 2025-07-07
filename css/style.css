@@ -129,18 +129,20 @@
     background-color: #f5f5f5;
   }
   
-  .slides {
-    display: flex;
-    width: 200%; /* Doble del contenedor porque hay 6 imágenes */
-    animation: scrollInfinite 30s linear infinite;
-  }
-  
   .carousel:hover .slides {
     animation-play-state: paused;
   }
   
+  .slides {
+    display: flex;
+    width: 200%;
+    animation: scrollInfinite 30s linear infinite;
+    gap: 0;         /* Elimina cualquier espacio entre hijos */
+    font-size: 0;   /* Evita espacios por texto en línea */
+  }
+  
   .slides img {
-    width: calc(100% / 6); /* Cada imagen ocupa 1/6 del total */
+    width: calc(100% / 6);
     height: auto;
     max-height: 60vh;
     object-fit: contain;
@@ -150,6 +152,8 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #f5f5f5;
+    display: block; /* IMPORTANTE para eliminar espacios como inline */
+    font-size: initial;
   }
   
   @keyframes scrollInfinite {
