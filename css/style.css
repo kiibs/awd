@@ -129,25 +129,15 @@
     background-color: #f5f5f5;
   }
   
-  .carousel:hover .slides {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-  }
-  
   .slides {
     display: flex;
     gap: 0;
-    justify-content: flex-start;
-    font-size: 0;
-    line-height: 0;
-    -webkit-animation: scrollInfinite 30s linear infinite;
-    animation: scrollInfinite 30s linear infinite;
+    transition: transform 0.3s ease;
+    will-change: transform;
   }
   
   .slides img {
-    width: calc(100% / 6);
-    min-width: 0;
-    max-width: calc(100% / 6);
+    width: calc(100% / 3); /* 3 imágenes visibles */
     height: auto;
     max-height: 60vh;
     object-fit: contain;
@@ -157,24 +147,6 @@
     border: none;
     outline: none;
     vertical-align: top;
-  }
-  
-  @-webkit-keyframes scrollInfinite {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-  
-  @keyframes scrollInfinite {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
   }
   
   /* Texto debajo del carrusel */
