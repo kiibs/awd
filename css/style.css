@@ -122,41 +122,50 @@
   
   /* Carrusel modificado */
   .carousel {
-    width: 100vw;
+    width: 100vw; /* Aseguramos ancho de viewport */
     height: 60vh;
     overflow: hidden;
     position: relative;
     background-color: #f5f5f5;
   }
   
+  .carousel:hover .slides {
+    animation-play-state: paused;
+  }
+  
   .slides {
     display: flex;
-    width: 600vw; /* 6 imágenes x 100vw cada una */
     animation: scrollInfinite 30s linear infinite;
-    margin: 0;
-    padding: 0;
+    gap: 0;
+    font-size: 0;
+    line-height: 0;
   }
   
   .slides img {
-    width: 100vw;      /* Cada imagen ocupa toda la vista */
+    flex: 0 0 16.6667%; /* Ocupa justo 1/6 sin redondeos */
     height: auto;
     max-height: 60vh;
     object-fit: contain;
     flex-shrink: 0;
-    display: block;    /* Importante para quitar espacios inline */
+    align-self: flex-start;
     margin: 0;
     padding: 0;
-    border: none;
+    box-sizing: border-box;
     background-color: #f5f5f5;
+    display: block;
+    font-size: initial;
+    border: none;
+    outline: none;
   }
+  
   
   @keyframes scrollInfinite {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-500vw); } /* mueve 5 imágenes, para el efecto loop */
-  }
-  
-  .carousel:hover .slides {
-    animation-play-state: paused;
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
   
   /* Texto debajo del carrusel */
