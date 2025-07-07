@@ -137,12 +137,13 @@
     display: flex;
     width: 200%;
     animation: scrollInfinite 30s linear infinite;
-    gap: 0;         /* Elimina cualquier espacio entre hijos */
-    font-size: 0;   /* Evita espacios por texto en línea */
+    gap: 0;
+    font-size: 0;
+    line-height: 0;
   }
   
   .slides img {
-    width: calc(100% / 6);
+    flex: 0 0 16.6667%; /* Ocupa justo 1/6 sin redondeos */
     height: auto;
     max-height: 60vh;
     object-fit: contain;
@@ -152,9 +153,12 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #f5f5f5;
-    display: block; /* IMPORTANTE para eliminar espacios como inline */
+    display: block;
     font-size: initial;
+    border: none;
+    outline: none;
   }
+  
   
   @keyframes scrollInfinite {
     0% {
