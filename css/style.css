@@ -122,7 +122,7 @@
   
   /* Carrusel modificado */
   .carousel {
-    width: 100vw; /* Aseguramos ancho de viewport */
+    width: 100vw;
     height: 60vh;
     overflow: hidden;
     position: relative;
@@ -130,11 +130,13 @@
   }
   
   .carousel:hover .slides {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
   
   .slides {
     display: flex;
+    -webkit-animation: scrollInfinite 30s linear infinite;
     animation: scrollInfinite 30s linear infinite;
     gap: 0;
     font-size: 0;
@@ -142,7 +144,7 @@
   }
   
   .slides img {
-    flex: 0 0 16.6667%; /* Ocupa justo 1/6 sin redondeos */
+    flex: 0 0 16.6667%;
     height: auto;
     max-height: 60vh;
     object-fit: contain;
@@ -156,8 +158,17 @@
     font-size: initial;
     border: none;
     outline: none;
+    vertical-align: top; /* Safari fix */
   }
   
+  @-webkit-keyframes scrollInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   
   @keyframes scrollInfinite {
     0% {
