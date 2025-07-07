@@ -136,29 +136,27 @@
   
   .slides {
     display: flex;
-    -webkit-animation: scrollInfinite 30s linear infinite;
-    animation: scrollInfinite 30s linear infinite;
     gap: 0;
+    justify-content: flex-start;
     font-size: 0;
     line-height: 0;
+    -webkit-animation: scrollInfinite 30s linear infinite;
+    animation: scrollInfinite 30s linear infinite;
   }
   
   .slides img {
-    flex: 0 0 16.6667%;
+    width: calc(100% / 6);
+    min-width: 0;
+    max-width: calc(100% / 6);
     height: auto;
     max-height: 60vh;
     object-fit: contain;
-    flex-shrink: 0;
-    align-self: flex-start;
+    display: block;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
-    display: block;
-    font-size: initial;
     border: none;
     outline: none;
-    vertical-align: top; /* Safari fix */
+    vertical-align: top;
   }
   
   @-webkit-keyframes scrollInfinite {
