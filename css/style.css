@@ -26,17 +26,6 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--accent);
     background-color: var(--bg);
-    position: relative; /* Necesario para posicionar absolutamente dentro */
-  }
-  
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Charis SIL', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    z-index: 1; /* Asegura que esté encima si se superponen cosas */
   }
   
   .nav-icon {
@@ -61,6 +50,12 @@
   
   .navbar a:hover {
     color: var(--accent);
+  }
+  
+  .logo {
+    font-family: 'Charis SIL', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   
   .hero {
@@ -127,33 +122,33 @@
   
   /* Carrusel modificado */
   .carousel {
-    width: 100vw;
-    height: 60vh;
-    overflow: hidden;
-    position: relative;
-    background-color: #f5f5f5;
-  }
-  
-  .slides {
-    display: flex;
-    gap: 0;
-    transition: transform 0.3s ease;
-    will-change: transform;
-  }
-  
-  .slides img {
-    width: calc(100% / 3); /* 3 imágenes visibles */
-    height: auto;
-    max-height: 60vh;
-    object-fit: contain;
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    vertical-align: top;
-  }
-  
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.slides {
+  display: flex;
+  gap: 0;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.slides img {
+  width: calc(100% / 3); /* 3 imágenes visibles */
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: top;
+}
+
   /* Texto debajo del carrusel */
   .see-more {
     padding: 2rem;
