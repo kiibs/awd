@@ -26,6 +26,17 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--accent);
     background-color: var(--bg);
+    position: relative; /* Necesario para posicionar absolutamente dentro */
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Charis SIL', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; /* Asegura que esté encima si se superponen cosas */
   }
   
   .nav-icon {
@@ -50,12 +61,6 @@
   
   .navbar a:hover {
     color: var(--accent);
-  }
-  
-  .logo {
-    font-family: 'Charis SIL', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
   }
   
   .hero {
